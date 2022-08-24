@@ -1,6 +1,6 @@
 <template>
   <div id="main">
-
+    <h3>content</h3>
   </div>
 </template>
 
@@ -12,5 +12,6 @@ export default {
 
 <style lang="scss">
 
+    @import '../Style/MyMain.scss'
 
 </style>
