@@ -1,32 +1,57 @@
 <template>
     <footer>
-        <ul>
-            <h3 class="list-title">DC COMICS</h3>
-            <li v-for="(link, index) in links" :key="index">
-                <a href="link.url" :class="link.active?'active':'' ">{{link.text}}</a>
-            </li>
-        </ul>
+        <div class="container">
+            <div class="ul-container">
+                <ul>
+                <h3 class="list-title">DC COMICS</h3>
+                <li v-for="(link, index) in links" :key="index">
+                    <a :href="link.url">{{link.text}}</a>
+                </li>
+            </ul>
 
-        <ul>
-            <h3 class="list-title">SHOP</h3>
-            <li v-for="(shop, index) in shops" :key="index">
-                <a href="shop.url">{{shop.text}}</a>
-            </li>
-        </ul>
+            <ul>
+                <h3 class="list-title">SHOP</h3>
+                <li v-for="(shop, index) in shops" :key="index">
+                    <a :href="shop.url">{{shop.text}}</a>
+                </li>
+            </ul>
 
-        <ul>
-            <h3 class="list-title">DC</h3>
-            <li v-for="(dc, index) in dcs" :key="index">
-                <a href="dc.url">{{dc.text}}</a>
-            </li>
-        </ul>
+            <ul>
+                <h3 class="list-title">DC</h3>
+                <li v-for="(dc, index) in dcs" :key="index">
+                    <a :href="dc.url">{{dc.text}}</a>
+                </li>
+            </ul>
 
-        <ul>
-            <h3 class="list-title">SITES</h3>
-            <li v-for="(site, index) in sites" :key="index">
-                <a href="site.url">{{site.text}}</a>
-            </li>
-        </ul>
+            <ul>
+                <h3 class="list-title">SITES</h3>
+                <li v-for="(site, index) in sites" :key="index">
+                    <a :href="site.url">{{site.text}}</a>
+                </li>
+            </ul>
+            </div>
+
+            <img src="../assets/img/dc-logo.png" alt="logo">
+        </div>
+
+        
+
+        <div class="footer-bottom">
+            <div class="bottom-container">
+                <button>SIGN-UP NOW!</button>
+                <div class="socials">
+                    
+                    <h3>FOLLOW US</h3>
+                    
+                    <ul>
+                        <li>
+                            <img v-for="(icons, index) in socials" :key="index" :src='icons.icon' alt="social">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+        </div>
     </footer>
 </template>
 
@@ -38,15 +63,15 @@ export default {
         return{
             links:[
                 {
-                    text: 'CHARACTERS',
+                    text: 'Characters',
                     url: '#',
                 },
                 {
-                    text: 'COMICS',
+                    text: 'Comics',
                     url: '#',
                 },
                 {
-                    text: 'MOVIES',
+                    text: 'Movies',
                     url: '#',
                 },
                 {
@@ -54,15 +79,15 @@ export default {
                     url: '#',
                 },
                 {
-                    text: 'GAMES',
+                    text: 'Games',
                     url: '#',
                 },
                 {
-                    text: 'COLLECTIBLES',
+                    text: 'Videos',
                     url: '#',
                 },
                 {
-                    text: 'VIDEO',
+                    text: 'News',
                     url: '#',
                 },
                 {
@@ -156,6 +181,23 @@ export default {
                     url: '#',
                 },
             ],
+            socials:[
+                {
+                    icon: '../assets/img/footer-facebook.png'
+                },
+                {
+                    icon: '../assets/img/footer-facebook.png'
+                },
+                {
+                    icon: '../assets/img/footer-facebook.png'
+                },
+                {
+                    icon: '../assets/img/footer-facebook.png'
+                },
+                {
+                    icon: '../assets/img/footer-facebook.png'
+                }
+            ]
             
         }
     }
@@ -164,6 +206,8 @@ export default {
 
 </script>
 
-<style>
+<style lang="scss">
+
+@import '../Style/MyFooter.scss';
 
 </style>

@@ -1,0 +1,83 @@
+footer{
+    background-image: url(../assets/img/dc-logo.png);
+    background-image: url(../assets/img/footer-bg.jpg);
+    background-size: cover;
+    height: 400px;
+    
+    .container{
+        display: flex;
+        justify-content: space-between;
+        max-width: 1400px;
+        margin: 0 auto;
+
+        img{
+            height: 500px;
+            transform: rotate(-25deg);
+            opacity: 0.7;
+            position: absolute;
+            right: 300px;
+            bottom: 300px;
+        }
+
+        .ul-container{
+            display: flex;
+            ul{
+                margin-top: 40px;
+                margin-right: 40px;
+                h3{
+                   color: white;
+                   margin-bottom: 10px;
+                }
+                li{
+                    list-style-type: none;
+                    margin: 5px 0;
+                    a{
+                        text-decoration: none;
+                        color: gray;
+                    }
+                }
+            }
+        }
+    }
+
+    .footer-bottom{
+        background-color: #333;
+        margin-top: 75px;
+        height: 90px;
+
+        button{
+            color: white;
+            border: 2px solid #0E7CEB;
+            height: 60%;
+            background-color: transparent;
+            padding: 10px 15px;
+            
+        }
+        .bottom-container{
+            max-width: 1400px;
+            height: 90px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .socials{
+                display: flex;
+                align-items: center;
+                h3{
+                    color: #0E7CEB;
+                    margin: 0 10px;
+                }
+                ul{
+                    display: flex;
+                    list-style-type: none;
+                    img{
+                        margin: 0 5px;
+                    }
+                }
+            }
+        }
+    }
+
+    
+}
+
