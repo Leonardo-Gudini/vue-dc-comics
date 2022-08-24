@@ -6,11 +6,13 @@
 
         <nav>
             <ul>
-                <li v-for="(nav, index) in navbars" :key="index">
-                    <a :href="nav.url" :class="nav.active?'active':''">{{nav.txt}}prova</a>
+                <li v-for="(link, index) in links" :key="index">
+                    <a href="link.url" :class="link.active?'active':'' ">{{link.text}}</a>
                 </li>
             </ul>
         </nav>
+
+
     </header>
 </template>
 
@@ -18,68 +20,72 @@
 
 export default {
     name: "MyHeader",
-    Data(){
+    data(){
         return{
-            navbar: [
-            {
-                txt: "CHARACTERS",
-                url: "#",
-                active: "false"
-            },
-            {
-                txt: "COMICS",
-                url: "#",
-                active: "false"
-            },
-            {
-                txt: "MOVIES",
-                url: "#",
-                active: "false"
-            },
-            {
-                txt: "TV",
-                url: "#",
-                active: "false"
-            },
-            {
-                txt: "GAMES",
-                url: "#",
-                active: "false"
-            },
-            {
-                txt: "COLLECTIBLES",
-                url: "#",
-                active: "false"
-            },
-            {
-                txt: "VIDEOS",
-                url: "#",
-                active: "false"
-            },
-            {
-                txt: "FANS",
-                url: "#",
-                active: "false"
-            },
-            {
-                txt: "NEWS",
-                url: "#",
-                active: "false"
-            },
-            {
-                txt: "SHOP",
-                url: "#",
-                active: "false"
-            },
-        ]
+            links:[
+                {
+                    text: 'CHARACTERS',
+                    url: '#',
+                    active: false
+                },
+                {
+                    text: 'COMICS',
+                    url: '#',
+                    active: true
+                },
+                {
+                    text: 'MOVIES',
+                    url: '#',
+                    active: false
+                },
+                {
+                    text: 'TV',
+                    url: '#',
+                    active: false
+                },
+                {
+                    text: 'GAMES',
+                    url: '#',
+                    active: false
+                },
+                {
+                    text: 'COLLECTIBLES',
+                    url: '#',
+                    active: false
+                },
+                {
+                    text: 'VIDEO',
+                    url: '#',
+                    active: false
+                },
+                {
+                    text: 'FANS',
+                    url: '#',
+                    active: false
+                },
+                {
+                    text: 'NEWS',
+                    url: '#',
+                    active: false
+                },
+                {
+                    text: 'SHOP',
+                    url: '#',
+                    active: false
+                },
+            ]
         }
-        
     }
 }
 
 
 </script>
 
-<style>
+<style lang="scss">
 
+    @import '../Style/var.scss';
+    @import '../Style/MyHeader.scss';
+    @import '../Style/reset.scss';
+
+    
 </style>

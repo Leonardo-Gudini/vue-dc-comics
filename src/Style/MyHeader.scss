@@ -1,0 +1,33 @@
+header{
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 90px;
+    nav{
+        display: flex;
+        align-items: center;
+
+        ul{
+        display: flex;
+            li{
+                list-style-type: none;
+                margin: 0 20px;
+                a{
+                    text-decoration: none;
+                    color: black;
+                    
+                }
+                .active{
+                    color: $main-color;
+                    border-bottom: 4px solid $main-color;
+                    padding-bottom: 32px;
+                }
+            }
+        }
+    }
+    img{
+        height: 70px;
+    }
+}
