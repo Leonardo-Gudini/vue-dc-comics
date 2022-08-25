@@ -26,6 +26,9 @@ export default {
 
 <style lang="scss">
 
+html{
+  font-family: sans-serif;
+}
   
 
 </style>

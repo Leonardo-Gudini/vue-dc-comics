@@ -8,25 +8,44 @@
         height: 300px;
 
         .tag{
-            background-color: blue;
+            background-color: $main-color;
             padding: 10px;
             color: white;
             position: absolute;
             bottom: -15px;
-            left: 30px;
+            left: 240px;
         }
     }
 
-    .comic-container{
-        height: 200px;
+    .comic-bg{
         background-color: #333;
+        padding: 60px;
+
+        .comic-container{
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
         
         ul{
             display: flex;
             flex-wrap: wrap;
+            justify-content: space-between;
 
             li{
-                width: calc(100%/ 6);
+                list-style-type: none;
+                width: calc(80%/ 6);
+                margin: 20px;
+
+                .image{
+                    height: 200px;
+                    overflow: hidden;
+                }
+
+                h3{
+                    margin-top: 10px;
+                    font-weight: 500;
+                }
             }
         }
 
