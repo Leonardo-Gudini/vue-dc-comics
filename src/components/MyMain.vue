@@ -10,18 +10,18 @@
     <div class="comic-bg">
 
       <div class="comic-container">
-
         <ul>
-        <li v-for="(comic, index) in comics" :key="index">
-          
-          <div class="image">
-            <img :src='require(`comic.thumb`)' alt="comic-cover"> 
-          </div>
-          <h3>{{comic.series}} </h3>
-        </li>
-      </ul>
-
+          <li v-for="(comic, index) in comics" :key="index">
+            
+            <div class="image">
+              <img :src="comic.thumb" alt="comic-cover"> 
+            </div>
+            <h3>{{comic.series}} </h3>
+          </li>
+        </ul>
       </div>
+
+      <button>LOAD MORE</button>
 
     </div>
   </div>

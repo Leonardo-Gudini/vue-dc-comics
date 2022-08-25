@@ -2,33 +2,36 @@
     <footer>
         <div class="container">
             <div class="ul-container">
+                <div>
+                    <ul>
+                    <h3 class="list-title">DC COMICS</h3>
+                    <li v-for="(link, index) in links" :key="index">
+                        <a :href="link.url">{{link.text}}</a>
+                    </li>
+                </ul>
+
                 <ul>
-                <h3 class="list-title">DC COMICS</h3>
-                <li v-for="(link, index) in links" :key="index">
-                    <a :href="link.url">{{link.text}}</a>
-                </li>
-            </ul>
+                    <h3 class="list-title">SHOP</h3>
+                    <li v-for="(shop, index) in shops" :key="index">
+                        <a :href="shop.url">{{shop.text}}</a>
+                    </li>
+                </ul>
+                </div>
+                
 
-            <ul>
-                <h3 class="list-title">SHOP</h3>
-                <li v-for="(shop, index) in shops" :key="index">
-                    <a :href="shop.url">{{shop.text}}</a>
-                </li>
-            </ul>
+                <ul>
+                    <h3 class="list-title">DC</h3>
+                    <li v-for="(dc, index) in dcs" :key="index">
+                        <a :href="dc.url">{{dc.text}}</a>
+                    </li>
+                </ul>
 
-            <ul>
-                <h3 class="list-title">DC</h3>
-                <li v-for="(dc, index) in dcs" :key="index">
-                    <a :href="dc.url">{{dc.text}}</a>
-                </li>
-            </ul>
-
-            <ul>
-                <h3 class="list-title">SITES</h3>
-                <li v-for="(site, index) in sites" :key="index">
-                    <a :href="site.url">{{site.text}}</a>
-                </li>
-            </ul>
+                <ul>
+                    <h3 class="list-title">SITES</h3>
+                    <li v-for="(site, index) in sites" :key="index">
+                        <a :href="site.url">{{site.text}}</a>
+                    </li>
+                </ul>
             </div>
 
             <img src="../assets/img/dc-logo-bg.png" alt="logo">
@@ -44,8 +47,8 @@
                     <h3>FOLLOW US</h3>
                     
                     <ul>
-                        <li>
-                            <img v-for="(icons, index) in socials" :key="index" :src='icons.icon' alt="social">
+                        <li v-for="(icons, index) in socials" :key="index">
+                            <img  :src="require('@/assets/img/' + icons.icon)" alt="social">
                         </li>
                     </ul>
                 </div>
@@ -183,19 +186,19 @@ export default {
             ],
             socials:[
                 {
-                    icon: '../assets/img/footer-facebook.png'
+                    icon: 'footer-facebook.png'
                 },
                 {
-                    icon: '../assets/img/footer-facebook.png'
+                    icon: 'footer-periscope.png'
                 },
                 {
-                    icon: '../assets/img/footer-facebook.png'
+                    icon: 'footer-pinterest.png'
                 },
                 {
-                    icon: '../assets/img/footer-facebook.png'
+                    icon: 'footer-twitter.png'
                 },
                 {
-                    icon: '../assets/img/footer-facebook.png'
+                    icon: 'footer-youtube.png'
                 }
             ]
             
@@ -208,6 +211,7 @@ export default {
 
 <style lang="scss">
 
+@import '../Style/var.scss';
 @import '../Style/MyFooter.scss';
 
 </style>

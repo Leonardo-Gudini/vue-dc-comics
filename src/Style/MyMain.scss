@@ -1,11 +1,13 @@
 #main{
 
+    text-align: center;
+
     .main-bg{
         background-image: url(../assets/img/jumbotron.jpg);
         background-position:top;
         background-size: cover;
         position: relative;
-        height: 300px;
+        height: 400px;
 
         .tag{
             background-color: $main-color;
@@ -18,8 +20,8 @@
     }
 
     .comic-bg{
-        background-color: #333;
-        padding: 60px;
+        background-color: #222;
+        padding: 60px 60px 20px 60px;
 
         .comic-container{
             max-width: 1400px;
@@ -36,6 +38,7 @@
                 list-style-type: none;
                 width: calc(80%/ 6);
                 margin: 20px;
+                text-align: start;
 
                 .image{
                     height: 200px;
@@ -54,5 +57,14 @@
 
     H3{
         color: white;
+    }
+
+    button{
+        text-align: center;
+        padding: 10px 40px;
+        background-color: $main-color;
+        border: none;
+        color: white;
+        font-weight: bold;
     }
 }
