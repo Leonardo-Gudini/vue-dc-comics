@@ -1,9 +1,38 @@
 #main{
-    background-color: black;
-    height: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+
+    .main-bg{
+        background-image: url(../assets/img/jumbotron.jpg);
+        background-position:top;
+        background-size: cover;
+        position: relative;
+        height: 300px;
+
+        .tag{
+            background-color: blue;
+            padding: 10px;
+            color: white;
+            position: absolute;
+            bottom: -15px;
+            left: 30px;
+        }
+    }
+
+    .comic-container{
+        height: 200px;
+        background-color: #333;
+        
+        ul{
+            display: flex;
+            flex-wrap: wrap;
+
+            li{
+                width: calc(100%/ 6);
+            }
+        }
+
+    }
+
+
     H3{
         color: white;
     }
